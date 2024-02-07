@@ -51,7 +51,6 @@ const averageAgeAverageGradeStudents = async () => {
 })();
 
 //2.Show the number of students that are over 60 and the number of students that are under 30 years old
-
 const studentsOver30Under60 = async () => {
   try {
     const students = await fetchStudentsAsync();
@@ -207,9 +206,9 @@ const fullNamesLongerThanEightCharacters = async () => {
 const bestStudentByAverageGrade = async () => {
   try {
     const students = await fetchStudentsAsync();
-    const studentsCopy = [...students]; // Create a copy of the students array
+    const studentsCopy = [...students]; 
 
-    studentsCopy.sort((a, b) => b.averageGrade - a.averageGrade);
+    studentsCopy.sort((a, b) => b - a);
 
     const bestStudents = studentsCopy.slice(0, 10);
 
