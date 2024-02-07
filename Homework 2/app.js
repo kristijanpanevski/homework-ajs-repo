@@ -208,7 +208,7 @@ const bestStudentByAverageGrade = async () => {
     const students = await fetchStudentsAsync();
     const studentsCopy = [...students]; 
 
-    studentsCopy.sort((a, b) => b - a);
+    studentsCopy.sort((a, b) => b.averageGrade - a.averageGrade);
 
     const bestStudents = studentsCopy.slice(0, 10);
 
